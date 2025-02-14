@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.header-content,
+.header-image {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.header-content {
+    width: 70%;
+}
+
+.header-image {
+    width: 28%;
+    text-align: right;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: block;
+}
+
+.navbar a:hover {
+    background-color: #575757;
+}
+
+section {
+    margin: 20px 0;
+}
+
+.experience-box,
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-bar {
+    background-color: #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 20px;
+    background-color: #4caf50;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.boton {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .header-content,
+    .header-image {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar li {
+        display: block;
+    }
+
+    .container {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .boton {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar a {
+        padding: 10px;
+    }
+
+    footer {
+        position: static;
+        padding: 20px 0;
+    }
+}

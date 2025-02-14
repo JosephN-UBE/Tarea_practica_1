@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <link rel="stylesheet" href="styles_2.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .gallery-item img {
+            max-width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            padding-top: 60px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0,0,0);
+            background-color: rgba(0,0,0,0.9);
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .boton {
+            display: block;
+            width: 250px;
+            margin: 20px auto;
+            padding: 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+        .boton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Galería de Pasatiempos</h1>
+        </header>
+        <section class="gallery">
+            <h2>Mis Pasatiempos</h2>
+            <div class="gallery-item">
+                <img src="actividad_1.jfif" alt="Pasatiempo 1" onclick="openModal('actividad_1.jfif')">
+            </div>
+            <div class="gallery-item">
+                <img src="actividad_2.jpeg" alt="Pasatiempo 2" onclick="openModal('images/pasatiempo2.jpg')">
+            </div>
+            <div class="gallery-item">
+                <img src="actividad_4.jpg" alt="Pasatiempo 3" onclick="openModal('images/pasatiempo3.jpg')">
+            </div>
+        </section>
+        
+        <div id="modal" class="modal">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img class="modal-content" id="modal-image">
+            <div id="caption"></div>
+        </div>
+    </div>
+
+    <button class="boton" onclick="window.location.href='index.html'">Listado de ejercicios</button>
+
+    <script>
+        function openModal(src) {
+            var modal = document.getElementById("modal");
+            var modalImg = document.getElementById("modal-image");
+            modal.style.display = "block";
+            modalImg.src = src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("modal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
+``` ▋
